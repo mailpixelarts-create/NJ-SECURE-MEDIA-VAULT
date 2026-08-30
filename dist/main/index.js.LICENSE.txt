@@ -1,0 +1,23 @@
+/*!
+ * mime-db
+ * Copyright(c) 2014 Jonathan Ong
+ * Copyright(c) 2015-2022 Douglas Christopher Wilson
+ * MIT Licensed
+ */
+
+/*!
+ * mime-types
+ * Copyright(c) 2014 Jonathan Ong
+ * Copyright(c) 2015 Douglas Christopher Wilson
+ * MIT Licensed
+ */
+
+/*!
+* ONNX Runtime Web v1.14.0
+* Copyright (c) Microsoft Corporation. All rights reserved.
+* Licensed under the MIT License.
+*/
+
+/*! Axios v1.20.0 Copyright (c) 2026 Matt Zabriskie and contributors */
+
+/*! noble-hashes - MIT License (c) 2022 Paul Miller (paulmillr.com) */
