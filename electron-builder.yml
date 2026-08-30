@@ -1,0 +1,63 @@
+appId: com.secure.vault
+productName: Secure Media Vault
+copyright: Copyright © 2026 Secure Media Vault
+
+directories:
+  output: release
+  buildResources: build
+
+# ── Files to include in the ASAR archive ──────────────────────────────
+files:
+  - dist/**/*
+  - package.json
+
+# ── Binaries bundled outside ASAR (native modules + tools) ────────────
+extraResources:
+  - from: "bin"
+    to: "bin"
+    filter:
+      - "**/*"
+
+# ── Windows NSIS Installer ───────────────────────────────────────────
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: resources/icons/app.ico
+  artifactName: "${productName}-${version}-Setup.${ext}"
+  publisherName: Secure Media Vault
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  allowElevation: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Secure Media Vault
+  uninstallDisplayName: Secure Media Vault
+  uninstallerIcon: resources/icons/app.ico
+  installerIcon: resources/icons/app.ico
+  installerHeaderIcon: resources/icons/app.ico
+  # License agreement (optional)
+  # license: LICENSE.txt
+  # Installer graphics
+  # sidebarImage: resources/icons/app-sidebar.bmp
+
+# ── ASAR Packaging ───────────────────────────────────────────────────
+asar: true
+asarUnpack:
+  - "resources/bin/**"
+  - "node_modules/better-sqlite3/**"
+  - "node_modules/argon2/**"
+  - "node_modules/sodium-native/**"
+
+# ── Compression ──────────────────────────────────────────────────────
+compression: maximum
+
+# ── Publish to GitHub Releases ───────────────────────────────────────
+publish:
+  provider: github
+  owner: jkeylight
+  repo: NJ-SECURE-MEDIA-VAULT
